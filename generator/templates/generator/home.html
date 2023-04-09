@@ -1,0 +1,47 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+<div class="container text-info">
+
+<h1 class="text-center text-dark">Password generator</h1>
+<div class="row checkbox-row">
+<form action="{% url 'password' %}">
+    
+    <label for="lenght" class="form-label">Lenght</label>
+    <br>
+    <select name="lenght" class="form-select text-tertiary" id="lenght">
+        
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12" selected>12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+    </select>
+    
+    <br>
+    <div class="form-check">
+    <input type="checkbox" name="uppercase" class="form-check-input" id="uppercase"> 
+    <label class="form-check-label" for="uppercase">Uppercase</label>
+    </div>
+    <br>
+    <div class="form-check">
+    <input type="checkbox" name="numbers" class="form-check-input" id="numbers"> 
+    <label class="form-check-label" for="numbers">Numbers</label>
+    </div>
+    <br>
+    <div class="form-check">
+    <input type="checkbox" name="special" class="form-check-input" id="special"> 
+    <label class="form-check-label" for="special">Special Characters</label>
+    </div>
+    <br>
+
+    <input type="submit" value="Generate Password" class="btn btn-primary">
+    
+</form>
+</div>
+<a href="{% url 'description' %}">Info</a>
+</div>
